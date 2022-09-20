@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+    <center>
+        <h1>PASCASARJANA</h1>
+    </center>
+    
+    <h2>Pascasarjana :</h2>
+    
+    {% for judul in title %} 
+    <li>{{ judul }}</li>
+    {% endfor %}
+
+
+{% endblock %}
