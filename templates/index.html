@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<center>
+    
+    <h1>UNIVERSITAS SULTAN AGENG TIRTAYASA</h1>
+    <img src="{% static 'image/gedunguntirta.png' %}" alt="Logo Untirta" width="350px">
+</center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(255, 255, 255, 0.568) ;">Visi</h4>
+    </center>
+    <p> Terwujudnya UNTIRTA Sebagai Integrated Smart and Green (It’S Green) University yang UNGGUL, BERKARAKTER DAN BERDAYA SAING, di Kawasan ASEAN tahun 2030.</p>
+    
+    <center>
+        <h4 style="background-color: rgba(255, 255, 255, 0.568) ;">Misi</h4>
+    </center>
+    <p>Meningkatkan kualitas, relevansi dan daya saing pendidikan serta lulusan yang unggul, berkarakter dan berdaya saing di kawasan ASEAN.</p>
+    <p>Meningkatkan kualitas dan kuantitas penelitian dan pengabdian kepada masyarakat yang inovatif berbasis kebutuhan nyata sesuai perkembangan zaman.</p>
+    <p>Meningkatkan daya dukung tatakelola perguruan tinggi yang baik sebagai implementasi dari Integrated Smart and Green (It’S Green) University.</p>
+
+    <center>
+        <h4 style="background-color: rgba(255, 255, 255, 0.568) ;">Value</h4>
+    </center>
+    <p>JAWARA (Jujur Adil Wibawa Amanah Religius Akuntabel)</p>
+    <p>“UNTIRTA merupakan rumah yang tidak hanya berperan sebagai tempat, namun juga sebagai sumber pengetahuan, keteladanan, dan kebajikan. Oleh karena itu seluruh sivitas akademikanya berkewajiban menjunjung tinggi nilai-nilai dasar dalam melaksanakan tugas dan tanggungjawabnya.” (Sulaiman. 2019)</p>
+
+
+
+{% for judul in title %} 
+<li>{{ judul }}</li>
+{% endfor %}
+
+
+{% endblock %}
