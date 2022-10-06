@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<body>
+    <center>
+      <h1>TENDIK FKIP</h1>
+    </center>
+    <br>
+   
+    
+    <center>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Jabatan</th>
+        </tr>
+        
+            {% for tendik in educator %}
+            <tr>
+                <td>{{tendik.no}}</td>
+                <td>{{tendik.nip}}</td>
+                <td>{{tendik.nama}}</td>
+                <td>{{tendik.jabatan}}</td>
+             
+    
+    
+            </tr>
+            {% endfor %}
+        
+    </table>
+  
+    </center>
+    </body>
+
+{% endblock %}

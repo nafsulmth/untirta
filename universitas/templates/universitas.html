@@ -23,58 +23,90 @@
         <li><a href="/pascasarjana">PASCASARJANA</a></li>
       </ul>
     </nav>
-</body
-</html>
+    </body>
 
-<style>
-    body {
-      background-image: linear-gradient(to right, #E3CAA5, #E3CAA5);
-      margin-left: 50px;
-      margin-right: 50px;
-      padding: 0;
-  }
-  
-  nav {
-      top: 0;
-      left: 0;
-      position: fixed;
-      height: 80px;
-      width: 100%;
-      box-sizing: border-box;
-      background: rgba(0, 0, 0, 0.5);
-      border-bottom: 1px solid white;
-  }
-  
-  .logo {
-      float: left;
-      height: 10px;
-      font-size: 36px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: rgb(78, 20, 20);
-      padding: 20px 20px;
-      justify-content: space-around;
-  }
-  
-  nav ul {
-      margin: 0;
-      padding: 0;
-      float: right;
-      list-style: none;
-      display: flex;
-  }
-  
-  nav ul li a {
-      font-size: 15px;
-      font-weight: bold;
-      color: white;
-      line-height: 80px;
-      text-decoration: none;
-      padding: 12px 30px;
-  }
-  
-  nav ul li a:hover {
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.8);
-  }
-  </style>
+    <body>
+        <center>
+            <img src="\static\images\gedunguntirta.png" height="350px">
+        </center>
+    </body>
+    </html>
+
+    <style>
+        body {
+          background-image: linear-gradient(to right, #FF9494, #FF9494);
+          margin-left: 50px;
+          margin-right: 50px;
+          padding: 0;
+      }
+      
+      nav {
+          top: 0;
+          left: 0;
+          position: fixed;
+          height: 80px;
+          width: 100%;
+          box-sizing: border-box;
+          background: rgba(0, 0, 0, 0.5);
+          border-bottom: 1px solid white;
+      }
+      
+      .logo {
+          float: left;
+          height: 10px;
+          font-size: 36px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: white;
+          padding: 20px 20px;
+          justify-content: space-around;
+      }
+      
+      nav ul {
+          margin: 0;
+          padding: 0;
+          float: right;
+          list-style: none;
+          display: flex;
+      }
+      
+      nav ul li a {
+          font-size: 15px;
+          font-weight: bold;
+          color: white;
+          line-height: 80px;
+          text-decoration: none;
+          padding: 12px 30px;
+      }
+      
+      nav ul li a:hover {
+          border-radius: 10px;
+          background: rgba(0, 0, 0, 0.8);
+      }
+      </style>
+
+{% extends 'base.html' %} 
+
+{% block content %}
+
+    <center>
+        <h1>PROFIL UNIVERSITAS SULTAN AGENG TIRTAYASA</h1>
+        <img src="\static\image\logofk.png" height="200px">
+    </center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(255, 255, 255, 0.568) ;">Tentang Untirta</h4>
+    </center>
+        <P>Universitas Sultan Ageng Tirtayasa disingkat Untirta, adalah PTN (Perguruan Tinggi Negeri) yang terdapat di Provinsi Banten, Indonesia. Dengan kampus utama di Serang, kampus Fakultas Teknik yang berada di Cilegon dan Fakultas Keguruan yang berada di Ciwaru.</P>
+        <P>Selaku Perguruan tinggi, mahasiswa dan dosen senantiasa melakukan penelitian-penelitian dan pengabdian yang mengarah ke berbagai bidang untuk kemajuan bangsa Indonesia ke depannya.</P>
+    <center>
+        <h4 style="background-color: rgba(255, 255, 255, 0.568) ;">Sejarah Untirta</h4>
+    </center>
+    <p>Sejarah Universitas Sultan Ageng Tirtayasa dimulai dari Yayasan Pendidikan Tirtayasa yang didirikan tanggal 1 Oktober 1980, berkedudukan di Serang, Banten. Pendirian yayasan ini dikukuhkan berdasarkan Akte Notaris Rosita Wibisono, SH. No. 1 tanggal 1 Oktober 1980, yang kemudian diadakan perubahan melalui Akte Notaris Ny. R. Arie Soetardjo, SH. No. 1 tanggal 3 Maret 1986. </p>
+    <p>Maksud dan tujuan pendirian yayasan ini adalah :</p>
+    <p>Membantu usaha-usaha pemerintah dalam bidang pendidikan umum.</p>
+    <p>Mendirikan sekolah-sekolah mulai dari taman kanak-kanak sampai dengan perguruan tinggi, termasuk juga sekolah-sekolah kejuruan.</p>
+    <p>Merencanakan dan mengusahakan sarana pendidikan, serta sarana olah raga.</p>
+
+
+{% endblock %}
