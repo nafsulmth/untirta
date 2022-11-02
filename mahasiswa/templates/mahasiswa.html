@@ -2,43 +2,88 @@
 
 {% block content %}
 
-<body>
     <center>
-    <h1>Mahasiswa Pendidikan Matematika</h1>
+        <h3>DAFTAR MAHASISWA PENDIDIKAN MATEMATIKA</h3>
+        <h4>KELAS 3A</h4>
     </center>
-    <br>
-    
-    
+
     <center>
-    <table border="1">
-        <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>NIM</th>
-            <th>Tempat, Tanggal Lahir</th>
-            <th>Email</th>
-            <th>Foto</th>
-        </tr>
-        
-            {% for mahasiswa in student %}
+        <h5>
+            <a href="{% url 'tambah_mahasiswa' %}">Tambah Mahasiswa</a>
+        </h5>
+    </center>
+    
+
+    <center>
+
+        <table class="table1">
             <tr>
-                <td>{{mahasiswa.no}}</td>
+                <th>NIM</th>
+                <th>NAMA</th>
+                <th>TTL</th>
+                <th>EMAIL</th>
+                <th>FAKULTAS</th>
+                <th>PRODI</th>
+                <th>ALAMAT</th>
+                <th>FOTO</th>
+                <th>ACTION</th>
+            </tr>
+    
+        {% for mahasiswa in student %}
+        
+            <tr>
+                <td><a href="{% url 'ubah_mahasiswa' mahasiswa.id %}">{{mahasiswa.nim}}</a></td>
                 <td>{{mahasiswa.nama}}</td>
-                <td>{{mahasiswa.nim}}</td>
                 <td>{{mahasiswa.ttl}}</td>
                 <td>{{mahasiswa.email}}</td>
+                <td>{{mahasiswa.fakultas}}</td>
+                <td>{{mahasiswa.prodi}}</td>
+                <td>{{mahasiswa.alamat}}</td>
                 <td>
-                    {% if mahasiswa.foto %}
-                    <img src="{{ mahasiswa.foto.url }}" width="100px">
+                    {% if mahasiswa.foto %} 
+                    <img src="{{mahasiswa.foto.url}}" width="100px">
                     {% endif %}
                 </td>
-    
-    
+                <td>
+                    <a href="{% url 'hapus_mahasiswa' mahasiswa.id %}" class="btn btn-danger">Hapus</a>
+                </td>
             </tr>
             {% endfor %}
         
-        </table>
-        </center>
-        </body>
+
+    </table>
+
+    </center>
+    
+    
+   
+<style>
+    .table1 {
+    font-family: sans-serif;
+    color: rgb(0, 0, 0) ;
+    border-collapse: collapse;
+    width: 50%;
+    border: 1px solid rgba(163, 110, 163, 0.43) ;
+}
+ 
+.table1 tr th{
+    background: rgba(163, 110, 163, 0.43) ;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
+ 
+.table1, th, td {
+    padding: 8px 20px;
+    text-align: center;
+}
+ 
+.table1 tr:hover {
+    background-color: rgba(245, 227, 245, 0.43) ;
+}
+ 
+.table1 tr:nth-child(even) {
+    background-color: rgba(163, 110, 163, 0.43) ;
+}
+</style>
 
 {% endblock %}
